@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ui.MainActivity"
+    android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/netcaln"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="NetClan Explorers"
+                            android:textSize="24sp"
+                            android:gravity="center"
+                            android:padding="16dp"
+                            android:background="#FF03DAC5"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:background="@color/grey_300" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                                <EditText
+                                    android:layout_marginTop="4dp"
+                                    android:layout_below="@id/netcaln"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Search"
+                                    android:textSize="24sp"
+                                    android:gravity="left|bottom"
+                                    android:padding="16dp"
+                                    android:id="@+id/search"
+                                    android:drawableEnd="@drawable/ic_notifications_black_24dp"
+                                    android:textColorHint="@color/black"
+                                    android:textCursorDrawable="@drawable/custom_cursor" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:background="@color/grey_300" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_filter"
+                                    android:paddingTop="5dp"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="10dp"
+                                    android:gravity="center_vertical"
+                                    android:paddingBottom="5dp"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawablePadding="10dp"
+                                    android:text="Month" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_filter"
+                                    android:layout_marginEnd="10dp"
+                                    android:paddingTop="5dp"
+                                    android:layout_marginStart="20dp"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="10dp"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawablePadding="10dp"
+                                    android:text="Categories" />
+
+                                <TextView
+                                    android:layout_width="128dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_filter"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawablePadding="10dp"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="25dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="5dp"
+                                    android:text="Filters" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:background="@color/grey_300" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:id="@+id/view_pager_home1">
+
+                                <androidx.viewpager.widget.ViewPager
+                                    android:id="@+id/view_pager_home"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/ln_points_home"
+                                    android:layout_below="@id/view_pager_home"
+                                    android:layout_marginTop="30dp"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:orientation="horizontal" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:background="@color/grey_300" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="Your Choice"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="4">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="30dp"
+                                                    android:layout_margin="5dp"
+                                                    android:src="@drawable/ic_bill_green" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_margin="5dp"
+                                                    android:gravity="center_horizontal"
+                                                    android:text="Bill Payment"
+                                                    android:textColor="@color/black" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="30dp"
+                                                    android:layout_margin="5dp"
+                                                    android:src="@drawable/ic_restaurant_green" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_margin="5dp"
+                                                    android:gravity="center_horizontal"
+                                                    android:text="Food"
+                                                    android:textColor="@color/black" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="30dp"
+                                                    android:layout_margin="5dp"
+                                                    android:src="@drawable/ic_movies_green" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_margin="5dp"
+                                                    android:gravity="center_horizontal"
+                                                    android:text="Movies"
+                                                    android:textColor="@color/black" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:layout_weight="1">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="30dp"
+                                                    android:layout_margin="5dp"
+                                                    android:src="@drawable/ic_bus_green" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_margin="5dp"
+                                                    android:layout_gravity="center_horizontal"
+                                                    android:text="Red Bus"
+                                                    android:textAlignment="center"
+                                                    android:textColor="@color/black" />
+                                        </LinearLayout>
+                                </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:background="@color/grey_300" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                                <EditText
+                                    android:id="@+id/editableTextBox"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="120dp"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="@android:drawable/editbox_background"
+                                    android:gravity="top|start"
+                                    android:hint="Add your notes here"
+                                    android:inputType="textMultiLine"
+                                    android:padding="15dp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:background="@color/grey_300" />
+
+                        <Button
+                            android:id="@+id/explorebutton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add Explorer"
+                            android:layout_gravity="center"
+                            android:padding="8dp"
+                            android:textColor="#FF03DAC5" />
+                </LinearLayout>
+        </ScrollView>
+</FrameLayout>
